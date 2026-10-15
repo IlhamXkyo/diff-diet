@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diff-diet"
+version = "0.1.0"
+description = "Token-budgeted Git diff optimizer and noise compressor for LLMs, AI agents, and code review."
+readme = "README.md"
+authors = [
+    { name = "IlhamXkyo", email = "xanderilham4@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+keywords = [
+    "git",
+    "diff",
+    "llm",
+    "ai-agents",
+    "code-review",
+    "token-optimization",
+    "developer-tools",
+    "cli"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/IlhamXkyo/diff-diet"
+Repository = "https://github.com/IlhamXkyo/diff-diet"
+Issues = "https://github.com/IlhamXkyo/diff-diet/issues"
+
+[project.scripts]
+diff-diet = "diff_diet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["diff_diet*"]
